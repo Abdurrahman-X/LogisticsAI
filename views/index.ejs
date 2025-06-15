@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abdulrahman Abolaji - Lead Cloud Engineer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-gray-100 min-h-screen">
+  <div class="container mx-auto px-4 py-16 max-w-4xl">
+    <header class="text-center mb-16 animate-fade-in">
+      <h1 class="text-5xl font-bold text-gray-800 mb-2"><%= name %></h1>
+      <h2 class="text-2xl text-blue-600 font-semibold"><%= role %></h2>
+    </header>
+
+    <section class="bg-white rounded-xl shadow-lg p-8 mb-12 animate-fade-in delay-1">
+      <h2 class="text-3xl font-bold text-gray-800 mb-4"><%= projectTitle %></h2>
+      <p class="text-lg text-gray-600 mb-6"><%= pitch %></p>
+      <div class="bg-blue-50 p-4 rounded-lg border border-blue-100">
+        <h3 class="font-semibold text-blue-700 mb-2">Why This Is Innovative:</h3>
+        <p class="text-blue-800"><%= innovation %></p>
+      </div>
+    </section>
+
+    <section class="bg-white rounded-xl shadow-lg p-8 animate-fade-in delay-2">
+      <h2 class="text-3xl font-bold text-gray-800 mb-6">Professional Bio</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="md:col-span-2">
+          <h3 class="text-xl font-semibold text-gray-700 mb-3">Skills</h3>
+          <div class="flex flex-wrap gap-2 mb-6">
+            <% skills.forEach(skill => { %>
+              <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full"><%= skill %></span>
+            <% }) %>
+          </div>
+
+          <h3 class="text-xl font-semibold text-gray-700 mb-3">Past Projects & Experience</h3>
+          <ul class="space-y-3 list-disc pl-5 text-gray-600">
+            <% experience.forEach(item => { %>
+              <li><%= item %></li>
+            <% }) %>
+          </ul>
+        </div>
+
+        <div class="border-l border-gray-200 pl-8">
+          <h3 class="text-xl font-semibold text-gray-700 mb-3">Education</h3>
+          <p class="text-gray-600 mb-2">
+            <span class="font-medium">B.Sc. Electronic & Computer Engineering</span><br>
+            Lagos State University, 2022<br>
+            <em class="text-sm text-gray-500">First Class Honors (4.52/5.00)</em>
+          </p>
+
+          <div class="mt-8">
+            <h3 class="text-xl font-semibold text-gray-700 mb-3">Contact</h3>
+            <p class="text-gray-600 mb-1"><%= email %></p>
+            <p class="text-gray-600"><%= phone %></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="text-center mt-16 text-gray-500 animate-fade-in delay-3">
+      <p>© 2025 The Future of AI-Powered Logistics. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
